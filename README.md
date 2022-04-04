@@ -20,3 +20,6 @@ The JavaScript Way
 </body>
 </html>
 ```
+
+## Key moments
++ JavaScript is a **dynamically typed** language.
