@@ -26,16 +26,16 @@ The JavaScript Way
 + Usage with non-boolean values
     ```js
     The && and || operators can also be applied to non-boolean values. In these cases, they may not return a boolean value.
-        • expr1 && expr2 returns expr1 if this expression can be converted to false. Otherwise, it returns expr2.
-        • expr1 || expr2 renvoie expr1 if this expression can be converted to true. Otherwise, it returns expr2.
+        +expr1 && expr2 returns expr1 if this expression can be converted to false. Otherwise, it returns expr2.
+        +expr1 || expr2 renvoie expr1 if this expression can be converted to true. Otherwise, it returns expr2.
     
     In JavaScript, a value or an expression that can be converted to false is said to be falsy. If, on the contrary, it can be converted to true, it is so-called truthy. All values are considered truthy except for the following falsy ones:
-        • false (obviously!)
-        • undefined
-        • null
-        • NaN (Not A Number)
-        • 0
-        • "" or ''
+        +false (obviously!)
+        +undefined
+        +null
+        +NaN (Not A Number)
+        +0
+        +"" or ''
     Here are a few examples illustrating this JS-specific behaviour.
     
         console.log(true && "Hello");       // "Hello"
@@ -71,3 +71,15 @@ The JavaScript Way
     ```js
     const elements = ["Hello", 7, { message: "Hi mom" }, true];
     ```
++ Although string values are primitive JavaScript types, some properties and methods may be applied to them just as if they were objects.
++ The length property returns the number of characters of the string.
++ JavaScript strings are **immutable**: once created, a string value never changes. String methods never affect the initial value and always return a new string.
++ The **toLowerCase()** and **toUpperCase()** methods respectively return new converted strings to lower and upper case.
++ String values may be compared using the === operator, which is case sensitive.
++ A string may be seen as an array of characters identified by their index. The index of the first character is 0 (not 1).
++ You may iterate over a string using either a **for** or the newer **for-of** loop.
++ The **Array.from()** method can be used to turn a string into an array that can be traversed letter by letter with the forEach() method.
++ Searching for values inside a string is possible with the **indexOf()**, **startsWith()** and **endsWith()** methods.
++ The **split()** method breaks a string into subparts delimited by a separator.
++ In JavaScript, a string is defined by placing text within *single quotes* ('I am a string') or *double quotes* ("I am a string").
++ The + operator concatenates (combines or adds) two or more strings.
