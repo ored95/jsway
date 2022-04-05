@@ -50,3 +50,24 @@ The JavaScript Way
         console.log("Hello" || "Goodbye")   // "Hello"
     ```
 + In switch-case statement, if '**break;**' is omitted then the next block is also run!
++ An array represents a list of elements. A JavaScript array is an object that has special properties, like length to access its size (number of elements). The first element of an array will be index number 0 - not 1.
++ To iterate over an array (browsing it element by element), you can use the for loop, the **forEach()** method or the newer **for-of** loop.
+    ```js
+    for (let i = 0; i < myArray.length; i++) {
+        // Use myArray[i] to access each array element one by one
+    }
+
+    myArray.forEach(myElement => {
+        // Use myElement to access each array element one by one
+    });
+
+    for (const myElement of myArray) {
+        // Use myElement to access each array element one by one
+    }
+    ```
++ The **push()** method adds an element at the end of an array. The **unshift()** method adds it at the beginning.
++ The **pop()** and **splice()** are used to remove elements from the array.
++ You can store different types of elements within an array, including strings, numbers, booleans and even objects
+    ```js
+    const elements = ["Hello", 7, { message: "Hi mom" }, true];
+    ```
