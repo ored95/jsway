@@ -83,3 +83,32 @@ The JavaScript Way
 + The **split()** method breaks a string into subparts delimited by a separator.
 + In JavaScript, a string is defined by placing text within *single quotes* ('I am a string') or *double quotes* ("I am a string").
 + The + operator concatenates (combines or adds) two or more strings.
+
+## The JavaScript OOP
++ A JavaScript class is defined with the class keyword. It can only contain methods. The **constructor()** method, called during object creation, is used to initialize the object, often by giving it some data properties. Inside methods, the this keyword represents the object on which the method was called.
+    ```js
+    class SomeClass {
+        constructor(param1, param2, ...) {
+            this.property1 = param1;
+            this.property2 = param2;
+            // ...
+        }
+        method1(/* ... */) {
+            // ...
+        }
+        method2(/* ... */) {
+            // ...
+        }
+        // ...
+    }
+
+    const obj = new SomeClass(arg1, arg2, ...);
+    ```
++ JavaScript’s OOP model is based on prototypes. Any JavaScript object has an internal property which is a link (a reference) to another object: its prototype. Prototypes are used to share properties and delegate behavior between objects.
++ When trying to access a property that does not exist in an object, JavaScript tries to find this property in the prototype chain of this object by first searching its prototype, then its prototype’s own prototype, and so on.
++ There are several ways to create and link JavaScript objects through prototypes. One is to use the **Object.create()** method.
+    ```js
+    // Create an object linked to myPrototypeObject
+    const myObject = Object.create(myPrototypeObject);
+    ```
++ The JavaScript *class* syntax is another, arguably more convenient way to create relationships between objects. It emulates the class-based OOP model found in languages like C++, Java or C#. It is, however, just syntactic sugar on top of JavaScript’s own prototype-based OOP model.
