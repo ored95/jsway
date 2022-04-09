@@ -112,3 +112,6 @@ The JavaScript Way
     const myObject = Object.create(myPrototypeObject);
     ```
 + The JavaScript *class* syntax is another, arguably more convenient way to create relationships between objects. It emulates the class-based OOP model found in languages like C++, Java or C#. It is, however, just syntactic sugar on top of JavaScript’s own prototype-based OOP model.
++ The *reduce()* method can take several parameters:
+    + The first one is the function associated to *reduce()* and called for each array element. It takes two parameters: the first is an **accumulator** which contains the accumulated value previously returned by the last invocation of the function. The other function parameter is the array element.
+    + The second one is the initial value of the accumulator (often 0).
