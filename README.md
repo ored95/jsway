@@ -115,3 +115,21 @@ The JavaScript Way
 + The *reduce()* method can take several parameters:
     + The first one is the function associated to *reduce()* and called for each array element. It takes two parameters: the first is an **accumulator** which contains the accumulated value previously returned by the last invocation of the function. The other function parameter is the array element.
     + The second one is the initial value of the accumulator (often 0).
+
+## Document Object Model ("DOM")
++ The structured representation of a web page is called **DOM**, short for *Document Object Model*. The DOM defines the structure of a page and a way to interact with it. This means it’s a programming interface, or **API** (*Application Programming Interface*). JavaScript is the language of choice for interacting with the DOM. Through a [World Wide Web Consortium](https://w3c.org/) (**W3C**) effort, the first version of a unified DOM was created in **1998**. Nowadays, all recent browsers use a standardized DOM.
++ A web page is a set of nested tags. You can represent a web page in a hierarchical form called a tree. The `<html>` element sets up your document as HTML and contains two sub-elements, `<head>` and `<body>`, which themselves contain several sub-elements.
++ Since they use CSS selectors, *querySelectorAll()* and *querySelector()* could cover all your needs, but they might perform **slower** than the others. Here are the general rules of thumb that you should follow.
+    
+    ||Number of items to get|Selection criterion|Method to use|
+    | ---:| :---: | :--- | :--- |
+    |1|Many |By tag |getElementsByTagName()|
+    |2|Many |By class |getElementsByClassName()|
+    |3|Many |Not by class or tag |querySelectorAll()|
+    |4|Only one |By ID |getElementById()|
+    |5|Only one (the first) |Not by ID |querySelector()|
+
++ It’s important to note that NodeList objects are not real JavaScript arrays, so not all array operations are applicable to them. To turn a NodeList object into an array, use the **Array.from()** method.
++ The *innerHTML* property returns the HTML content of an element. The *textContent* property returns its textual content without any HTML markup.
++ The *getAttribute()* and *hasAttribute()* methods allow access to element attributes. The `classList` property and its method **contains()** provides access to an element’s classes.
++ About **NodeList**: read more [here](https://developer.mozilla.org/en-US/docs/Web/API/NodeList).
