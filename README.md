@@ -133,3 +133,16 @@ The JavaScript Way
 + The *innerHTML* property returns the HTML content of an element. The *textContent* property returns its textual content without any HTML markup.
 + The *getAttribute()* and *hasAttribute()* methods allow access to element attributes. The `classList` property and its method **contains()** provides access to an element’s classes.
 + About **NodeList**: read more [here](https://developer.mozilla.org/en-US/docs/Web/API/NodeList).
++ Adding a new element to a web page can be broken into three steps:
+    + Create the new element, by `createElement()`
+    + Set element properties, by `setAttribute()`.
+    + Insert the new element in the DOM, by `appendChild()`.
++ The `innerHTML`,`textContent` and `classList` properties,as well as the `setAttribute` method, let you modify a DOM element’s information.
++ You create new DOM nodes via methods `createTextNode()` (for, well, text nodes) and `createElement()` (for elements themselves).
++ The `appendChild()` method lets you insert a new node as the last child of a DOM element.
++ The `insertBefore()` and `insertAdjacentHTML()` methods are alternative possibilities for adding content.
++ You can replace existing nodes with the `replaceChild()` method or remove them with `removeChild()`.
++ The JavaScript style property represents the style attribute of a DOM node. It lets you modify the element’s style by defining values of its CSS properties. Note that: the style property used in JS code only represents the style attribute of the element. Using this property, you cannot access style declarations defined elsewhere, for example in a CSS stylesheet.
++ CSS properties that involve multiple words are written in **camelCase** when dealing with JavaScript. For example, `font-family` becomes `fontFamily`.
++ The style property is not intended to access an element’s style. You should use the `getComputedStyle()` function instead.
++ Manipulating the DOM with JavaScript should be done sparingly so that page performance doesn’t suffer.

@@ -1,1 +1,8 @@
-/* CSS code goes here */
+#lisp {
+    color: red;
+}
+
+#python {
+    font-style: italic;
+    color: blue;
+}
