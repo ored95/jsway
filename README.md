@@ -146,3 +146,13 @@ The JavaScript Way
 + CSS properties that involve multiple words are written in **camelCase** when dealing with JavaScript. For example, `font-family` becomes `fontFamily`.
 + The style property is not intended to access an element’s style. You should use the `getComputedStyle()` function instead.
 + Manipulating the DOM with JavaScript should be done sparingly so that page performance doesn’t suffer.
+
+## Manipulate forms
+A form lets users input data through a web page. Inputted data is usually sent to a web server. Before data gets sent off, you can use JavaScript to interact with the form data and validate it.
++ Text zones (`input type="text">` or `<textarea>`) each have a value property to access the inputted value.
++ When a text field becomes the input target, this field has the focus. The `focus` and `blur` events are triggered when the field gets or loses the focus, respectively. The `focus()` and `blur()` methods can update the focus target programmatically.
++ Checkboxes, radio buttons, and dropdown lists generate change events whenever a user modifies their choice.
++ The DOM element that corresponds to the form has an elements property that lets you access its input fields programmatically.
++ Submitting a form triggers a submit event on the form DOM element. You can prevent the sending of form data to the server by using the `preventDefault()` method on the associated Event object.
++ Any modification of a text field triggers an input event, which can be used to validate its data as the user enters it.
++ A regular expression is a pattern to which strings can be compared. Regular expressions are often used to perform fine-grained validations of form data.
