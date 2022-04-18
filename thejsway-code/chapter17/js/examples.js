@@ -1,3 +1,4 @@
+// ====== Input text events: focus, blur ======
 const fields = ["username", "password"];
 const elements = fields.map(field => document.getElementById(field));
 const helpElements = fields.map(field => document.getElementById(field + "Help"));
@@ -42,3 +43,28 @@ for (let idx = 0; idx < fields.length; idx++) {
 
 // Give default focus to the "username" input field
 elements[0].focus();
+
+// ====== Checkboxes & Radio button & Dropdown lists event: CHANGE ======
+// Checkbox: Show if the email confirmation checkbox is checked
+document.getElementById("confirmation").addEventListener("change", e => {
+    console.log(`Email confirmation requested: ${e.target.checked}`);
+});
+
+// Radio buttons
+const subscriptionElements = Array.from(document.getElementsByName("subscription"));
+subscriptionElements.forEach(element => {
+    element.addEventListener("change", e => {
+        console.log(`Selected subscription: ${e.target.id}`);
+    });
+});
+
+// By default no subscriptions
+document.getElementById("no").checked = true;
+
+// Dropdown lists change event
+document.getElementById("nationality").addEventListener("change", e => {
+    console.log(`Nationality chosen: ${e.target.value}`);
+});
+
+// Change default nationality
+document.getElementById("nationality").value = "XX";
