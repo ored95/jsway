@@ -1,0 +1,9 @@
+canvas {
+    position: absolute; 
+    top: 2px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+    margin: auto; 
+    border:2px solid seagreen;
+}
