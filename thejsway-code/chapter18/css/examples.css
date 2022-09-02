@@ -1,1 +1,69 @@
 /* CSS code goes here */
+#frame {
+    border: 1px solid green;
+}
+
+#block {
+    width: 20px;
+    height: 40px;
+    background-color: red;
+    position: relative;
+}
+
+#block-new {
+    box-sizing: content-box;
+    position: relative;
+    opacity: 0.89;
+    padding: 10px;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    background: linear-gradient(180deg, rgba(239,40,156,1) 0, rgba(124,188,10,1) 100%);
+}
+
+#block-css {
+    width: 20px;
+    height: 40px;
+    background: rgba(255, 17, 176, 0.329);
+    position: relative;
+    margin-left: -20px;
+    animation-name: cssMoveBlock;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes cssMoveBlock {
+    from {
+        /* Initial position: to the left of the frame) */
+        left: 20px;
+    }
+    to {
+        /* Final position: within the right side of the frame) */
+        left: 100%;
+    }
+}
+
+#ball {
+    border: 1px solid rgb(146, 16, 146);
+    height: 410px;
+}
+
+img {
+    scale: 30%;
+    position: relative;
+    animation-name: loop;
+    animation-duration: 500ms; /* or: Xms */
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; /* or: normal */
+    animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    animation-fill-mode: forwards; /* or: backwards, both, none */
+    animation-delay: 50ms; /* or: Xms */
+}
+
+@keyframes loop {
+    from { bottom: -200px; rotate: -360deg; }
+    to   { bottom: 0; rotate: 360deg; }
+}
+
+.loop {
+    animation: loop unset steps(3) infinite alternate;
+}

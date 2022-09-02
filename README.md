@@ -156,3 +156,34 @@ A form lets users input data through a web page. Inputted data is usually sent t
 + Submitting a form triggers a submit event on the form DOM element. You can prevent the sending of form data to the server by using the `preventDefault()` method on the associated Event object.
 + Any modification of a text field triggers an input event, which can be used to validate its data as the user enters it.
 + A regular expression is a pattern to which strings can be compared. Regular expressions are often used to perform fine-grained validations of form data.
+
+## Animate page elements
++ The `setInterval()` function **kicks off** a repeated action and is called at regular intervals.
++ The `clearInterval()` function **stops a repeated action** that was launched with `setInterval()`.
++ The `setTimeout()` function **trigger** an action once after a certain delay.
+• The `requestAnimationFrame()` function asks the browser to execute a function that updates the animation as soon as possible. This works well for real-time animations.
++ The `cancelAnimationFrame()` function stops an in-progress animation that was launched with `requestAnimationFrame()`.
++ We can also create web animations via CSS, like that
+    ```css
+    #block-css {
+        width: 20px;
+        height: 40px;
+        background: red;
+        position: relative;
+        margin-left: -20px;
+        animation-name: cssMoveBlock;
+        animation-duration: 7s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes cssMoveBlock {
+        from {
+            /* Initial position: to the left of the frame) */
+            left: 20px;
+        }
+        to {
+            /* Final position: within the right side of the frame) */
+            left: 100%;
+        }
+    }
+    ```
